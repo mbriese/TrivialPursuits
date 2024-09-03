@@ -6,6 +6,7 @@ import Message from "./Message";
 function App() {
   const [count, setCount] = useState(0);
   const gameTitle = "Family Game Night";
+  
   return (
     <div className="App">
       <div>
@@ -14,7 +15,7 @@ function App() {
           target="_blank">
           <img
             src="/trivialpursuitssmallimage.webp"
-            className="logo align-align-self-center"
+            className="logo align-center"
             alt="Vite logo"
           />
         </a>

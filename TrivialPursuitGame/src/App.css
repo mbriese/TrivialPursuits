@@ -33,6 +33,32 @@
   }
 }
 
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+.page-section-inner {
+  max-width: 1066px;
+  margin: 0 auto;
+}
+
+.page-section-title {
+  font-size: 4rem;
+  margin: 0;
+  line-height: 1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Source Sans 3', sans-serif;
+}
+
 .card {
   padding: 2em;
 }

@@ -41,13 +41,14 @@ html {
 }
 
 .page-section-inner {
+  font-size: 4rem;
   max-width: 1066px;
-  margin: 0 auto;
+  margin: 5 auto;
 }
 
 .page-section-title {
   font-size: 4rem;
-  margin: 0;
+  margin: 15;
   line-height: 1;
 }
 

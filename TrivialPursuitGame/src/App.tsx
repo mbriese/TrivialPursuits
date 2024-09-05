@@ -1,5 +1,6 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
+import ListGroup from "./components/ListGroup";
 import "./App.css";
 import Message from "./Message";
 
@@ -20,18 +21,19 @@ function App() {
           />
         </a>
       </div>
-      <h1>Trivial Pursuit</h1>
+      <h1 className="page-section-title">Trivial Pursuit</h1>
       <div className="card">
-        <div className="message">{gameTitle}</div>
+        <div className="h2 page-section-inner message">{gameTitle}</div>
+        <div className="h2 page-section-inner">Select a Subject</div>
         <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+          score is {count}
         </button>
         <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+          Click Here to Play
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+      <p className="page-section-inner read-the-docs">
+        Click Directions to read the docs
       </p>
     </div>
   );

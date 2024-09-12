@@ -3,10 +3,9 @@ let items = ["arts & leterature", "entertainment", "geography", "history", "scie
 
 function Message() {
   return (
-    <>
-    <div className="page-section-inner body">Message</div>
-    </>
-    <h1>Welcome to Trivial Pursuit!</h1>;
+    <><>
+      <div className="page-section-inner body">Message</div>
+    </><h1>Welcome to Trivial Pursuit!</h1></>;
   )
 }
 

@@ -1,11 +1,11 @@
 let items = ["arts & leterature", "entertainment", "geography", "history", "science & nature", "sports & leisure" ]
-
+let message = "Select a topic"
 
 function Message() {
   return (
-    <><>
-      <div className="page-section-inner body">Message</div>
-    </><h1>Welcome to Trivial Pursuit!</h1></>;
+    <>
+      <h3>Welcome to Trivial Pursuit!</h3>
+    </>
   )
 }
 

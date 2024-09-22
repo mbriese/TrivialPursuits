@@ -3,11 +3,15 @@ import reactLogo from "./assets/react.svg";
 import ListGroup from "./components/ListGroup";
 import "./App.css";
 import Message from "./Message";
+import NameText from "./components/GetName";
 
 function App() {
   const [count, setCount] = useState(0);
-  const gameTitle = "Family Game Night";
-  
+  const [answer, setAnswer] = useState('');
+  const [contestantName, setName] = useState('');
+  const gameTitle = "Trivial Pursuit";
+
+
   return (
     <div className="App">
       <div>
@@ -21,20 +25,19 @@ function App() {
           />
         </a>
       </div>
-      <h1 className="page-section-title">Trivial Pursuit</h1>
+
       <div className="card">
+        <div className="h2 page-section-inner"><Message /></div>
         <div className="h2 page-section-inner message">{gameTitle}</div>
-        <div className="h2 page-section-inner">Select a Subject</div>
+        
         <button onClick={() => setCount((count) => count + 1)}>
           score is {count}
         </button>
-        <p>
-          Click Here to Play
-        </p>
       </div>
-      <p className="page-section-inner read-the-docs">
-        Click Directions to read the docs
-      </p>
+      <button onClick={() => setAnswer((answer) => 'true')}>
+          Click to Play Game
+      </button>
+
     </div>
   );
 }

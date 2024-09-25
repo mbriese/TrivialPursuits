@@ -35,15 +35,16 @@ function App() {
         </div>
         <div className="h2 page-section-inner message">{gameTitle}</div>
         <div className="h2 page-section-inner message">put in text field to getName</div>
-        <div className="h2 category-section-title message">this will be category selector</div>
+        <div className="h2 page-section-inner message">this is where we select category</div>
+        <div className="h2 category-section-title message">this will be category display</div>
         <div className="h2 page-section-item message">this will be question display</div>
         <div className="h2 page-section-item message">this will be answer1 button</div>
         <div className="h2 page-section-item message">this will be answer2 button</div>
         <div className="h2 page-section-item message">this will be answer3 button</div>
-        <div className="h2 my-button message">this will be the go back button/next question</div>
-        <div className="h2 my-button message">this will be the skip </div>
-        
-        <div className="h2 page-section-item message">this will be go to next category</div>
+        <div className="h2 button-item message">Back</div>
+        <div className="h2 button-item message">Next</div>
+        <div className="h2 button-item message">Previous Category</div>
+        <div className="h2 button-item message">Next Category</div>
         <button className="h2 button-item" onClick={() => setCount((count) => count + 1)}>
           category score is {count}
         </button>

@@ -49,15 +49,17 @@ html {
 }
 
 .button-item {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 700;
   max-width: 1066px;
   margin: 5 auto;
+  border:rgb(20, 78, 117);
+  border-radius: 5rem;
 }
 
 .myButton {
   color: rgb(255, 255, 255); 
-  font-size: 4rem; line-height: 5rem; padding: 6px; border-radius: 10px; font-family:  'Source Sans 3', sans-serif; font-weight: 700; text-decoration: none; font-style: normal; font-variant: normal; text-transform: none; background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%); box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; border: 6px groove rgb(28, 110, 164); display: inline-block;}
+  font-size: 4rem; line-height: 5rem; padding: 1rem; border-radius: 3rem; font-family:  'Source Sans 3', sans-serif; font-weight: 700; text-decoration: none; font-style: normal; font-variant: normal; text-transform: none; background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%); box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; border: 6px groove rgb(28, 110, 164); display: inline-block;}
   .myButton:hover {
   background: #1C6EA4; }
   .myButton:active {

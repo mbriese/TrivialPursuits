@@ -16,7 +16,7 @@ function App() {
   }
 
   function getName() {
-    <span>display Name</span>;
+    <span>display Player Name</span>;
   }
 
   return (

@@ -4,7 +4,7 @@ let message = "Select a topic"
 function Message() {
   return (
     <>
-      <h3>Welcome to Trivial Pursuit!</h3>
+      <h3>Welcome to Trivial Pursuit! Message Component</h3>
     </>
   )
 }

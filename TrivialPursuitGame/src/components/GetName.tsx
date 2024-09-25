@@ -8,8 +8,9 @@ const GetName = () => {
   };
   return (
     <div>
-      <input type = "text"></input>
-      
+      <input type = "text">
+      Enter name
+      </input> 
     </div>
   )
 }

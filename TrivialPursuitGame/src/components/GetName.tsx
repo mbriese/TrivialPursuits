@@ -1,18 +1,17 @@
-import { SetStateAction, useState } from "react";
+import { useState } from "react";
 
-const GetName = () => {
+const getName = () => {
   const [name, setName] = useState('');
-  const handleChange = (event: { target: { value: SetStateAction<string>; }; }) => {
-    setName(event.target.value);
+  const handleChange = (event: { target: { value: any; }; }) => {
     console.log('name is: ', event.target.value);
   };
   return (
     <div>
-      <input type = "text">
-      Enter name
-      </input> 
+      <h2>this is where I will enter player name</h2>
+      <input type = "text" id="nameText" name="name" onChange={handleChange} value={name} />
+      <h2>Enter name: {name}</h2>
     </div>
-  )
-}
+  );
+};
 
-export default GetName;
+export default getName;

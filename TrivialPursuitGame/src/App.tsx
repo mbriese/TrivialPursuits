@@ -3,20 +3,19 @@ import reactLogo from "./assets/react.svg";
 import ListGroup from "./components/ListGroup";
 import "./App.css";
 import Message from "./Message";
-import NameText from "./components/GetName";
+import getName from "./components/GetName";
 
 function App() {
   const [count, setCount] = useState(0);
   const [answer, setAnswer] = useState(false);
-  const [contestantName, setName] = useState("");
+  const [playerName, setName] = useState(" ");
   const gameTitle = "Trivial Pursuit Game Title";
+  const handleChange = (event: { target: { value: string } }) => {
+    console.log("name is: ", event.target.value);
+  };
 
   function displayGameName() {
     <span>gameName</span>;
-  }
-
-  function getName() {
-    <span>display Player Name</span>;
   }
 
   return (
@@ -33,9 +32,15 @@ function App() {
         <div className="h2 page-section-inner">
           <Message />
         </div>
-        <div className="h2 page-section-inner message">{gameTitle}</div>
-        <div className="h2 page-section-inner message">
-          put in text field to getName
+        <div className="h2 page-section-inner">{gameTitle}</div>
+        <div className="p page-section-inner">Enter Player Name
+          <input
+            type="string"
+            id="playerName"
+            name="playerName"
+            onChange={handleChange}
+            value={playerName}
+          />
         </div>
         <div className="h2 page-section-inner message">
           this is where we select category
@@ -57,10 +62,10 @@ function App() {
         </div>
         <table>
           <tbody>
-          <tr>
-            <td className="h2 button-item message d-table-cell">Back</td>
-            <td className="h2 button-item message">Next</td>
-          </tr>
+            <tr>
+              <td className="h2 button-item message d-table-cell">Back</td>
+              <td className="h2 button-item message">Next</td>
+            </tr>
           </tbody>
         </table>
         <div className="h2 button-item message">Previous Category</div>

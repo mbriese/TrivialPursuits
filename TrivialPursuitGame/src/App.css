@@ -33,10 +33,9 @@
   }
 }
 
-body,
-html {
+body {
   margin: 0;
-  padding: 0;
+  padding: 160 px 500px;
   background-color: white;
 }
 
@@ -74,7 +73,14 @@ html {
 
 
 .page-section-inner {
-  font-size: 4rem;
+  font-size: 2rem;
+  max-width: 1066px;
+  margin: 5 auto;
+}
+
+.page-section-inner-bold {
+  font-size: 2rem;
+  font-weight:700;
   max-width: 1066px;
   margin: 5 auto;
 }
@@ -93,6 +99,10 @@ body {
   font-family: 'Source Sans 3', sans-serif;
 }
 
+.table {
+  font-family: 'Source Sans 3', sans-serif;
+  table-layout: auto;
+}
 
 .card {
   padding: 2em;

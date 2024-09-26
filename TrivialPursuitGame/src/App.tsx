@@ -33,6 +33,12 @@ function App() {
         <div className="h2 page-section-inner">
           <Message />
         </div>
+
+        <button
+          className="h2 button-item"
+          onClick={() => setAnswer((answer) => !answer)}>
+          Click to Play Game - this will make things appear/disapper
+        </button>
         <div className="h2 page-section-inner">{gameTitle}</div>
         <div className="p page-section-inner">
           Enter Player Name
@@ -84,11 +90,6 @@ function App() {
           overall score is {count}
         </button>
       </div>
-      <button
-        className="h2 button-item"
-        onClick={() => setAnswer((answer) => !answer)}>
-        Click to Play Game - this will make things appear/disapper
-      </button>
     </div>
   );
 }

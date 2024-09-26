@@ -11,6 +11,7 @@ function App() {
   const [playerName, setName] = useState(" ");
   const gameTitle = "Trivial Pursuit Game Title";
   const handleChange = (event: { target: { value: string } }) => {
+    setName(event.target.value);
     console.log("name is: ", event.target.value);
   };
 
@@ -33,7 +34,8 @@ function App() {
           <Message />
         </div>
         <div className="h2 page-section-inner">{gameTitle}</div>
-        <div className="p page-section-inner">Enter Player Name
+        <div className="p page-section-inner">
+          Enter Player Name
           <input
             type="string"
             id="playerName"
@@ -41,6 +43,7 @@ function App() {
             onChange={handleChange}
             value={playerName}
           />
+          <h2>Player Name: {playerName}</h2>
         </div>
         <div className="h2 page-section-inner message">
           this is where we select category

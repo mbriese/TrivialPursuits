@@ -8,12 +8,13 @@ import getName from "./components/GetName";
 function App() {
   const [count, setCount] = useState(0);
   const [answer, setAnswer] = useState(false);
-  const [playerName, setName] = useState(" ");
+  let [playerName, setName] = useState('');
   const gameTitle = "Trivial Pursuit Game Title";
   const handleChange = (event: { target: { value: string } }) => {
     setName(event.target.value);
     console.log("name is: ", event.target.value);
   };
+  const [quit, setQuit] = useState(false);
 
   function displayGameName() {
     <span>gameName</span>;
@@ -33,6 +34,12 @@ function App() {
         <div className="h2 page-section-inner">
           <Message />
         </div>
+
+        <button
+          className="h2 button-item"
+          onClick={() => setAnswer((answer) => !answer)}>
+          Click to Play Game - this will make things appear/disapper
+        </button>
         <div className="h2 page-section-inner">{gameTitle}</div>
         <div className="p page-section-inner">
           Enter Player Name
@@ -43,7 +50,7 @@ function App() {
             onChange={handleChange}
             value={playerName}
           />
-          <h2>Player Name: {playerName}</h2>
+          {<p>Lets play {playerName}</p>}
         </div>
         <div className="h2 page-section-inner message">
           this is where we select category
@@ -83,12 +90,12 @@ function App() {
           onClick={() => setCount((count) => count + 1)}>
           overall score is {count}
         </button>
+        <button
+          className="h2 button-item"
+          onClick={() => setQuit((quit) => !quit)}>
+          Exit?
+        </button>
       </div>
-      <button
-        className="h2 button-item"
-        onClick={() => setAnswer((answer) => !answer)}>
-        Click to Play Game - this will make things appear/disapper
-      </button>
     </div>
   );
 }

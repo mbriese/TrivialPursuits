@@ -8,7 +8,14 @@ import getName from "./components/GetName";
 function App() {
   const [count, setCount] = useState(0);
   const [answer, setAnswer] = useState(false);
-  let [playerName, setName] = useState('');
+  let [playerName, setName] = useState("");
+  let categories = [
+    "Arts & Leisure",
+    "Entertainment",
+    "Geography",
+    "Science & Nature",
+    "Sports & Leisure",
+  ];
   const gameTitle = "Trivial Pursuit Game Title";
   const handleChange = (event: { target: { value: string } }) => {
     setName(event.target.value);
@@ -52,8 +59,14 @@ function App() {
           />
           {<p>Lets play {playerName}</p>}
         </div>
-        <div className="h2 page-section-inner message">
-          this is where we select category
+        <div className="h2 page-section-inner">
+         <p>Categories</p> 
+         <p>Select a Category</p> 
+          <ul className="page-section-item">
+            {categories.map((categories) => (
+              <li key={categories}>{categories}</li>
+            ))}
+          </ul>
         </div>
         <div className="h2 category-section-title message">
           this will be category display
@@ -73,8 +86,8 @@ function App() {
         <table>
           <tbody>
             <tr>
-              <td className="h2 button-item message d-table-cell">Back</td>
-              <td className="h2 button-item message">Next</td>
+              <td className="h2 button-item message d-table-cell display:inline">Back</td>
+              <td className="h2 button-item message d-table-cell display:inline">Next</td>
             </tr>
           </tbody>
         </table>

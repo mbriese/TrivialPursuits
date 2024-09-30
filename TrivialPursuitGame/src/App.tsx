@@ -21,6 +21,10 @@ function App() {
     setName(event.target.value);
     console.log("name is: ", event.target.value);
   };
+  const onClick = (event: { target: { value: boolean } }) => {
+    setAnswer(event.target.value);
+    console.log("do I want to play: ", event.target.value);
+  };
   const [quit, setQuit] = useState(false);
 
   function displayGameName() {
@@ -44,9 +48,10 @@ function App() {
 
         <button
           className="h2 button-item"
-          onClick={() => setAnswer((answer) => !answer)}>
-          Click to Play Game - this will make things appear/disapper
+          onClick={() => setAnswer(!answer)}>
+          Click to Play Game
         </button>
+
         <div className="h2 page-section-inner">{gameTitle}</div>
         <div className="p page-section-inner">
           Enter Player Name
@@ -60,8 +65,8 @@ function App() {
           {<p>Lets play {playerName}</p>}
         </div>
         <div className="h2 page-section-inner">
-         <p>Categories</p> 
-         <p>Select a Category</p> 
+          <p>Categories</p>
+          <p>Select a Category</p>
           <ul className="page-section-item">
             {categories.map((categories) => (
               <li key={categories}>{categories}</li>
@@ -86,8 +91,12 @@ function App() {
         <table>
           <tbody>
             <tr>
-              <td className="h2 button-item message d-table-cell display:inline">Back</td>
-              <td className="h2 button-item message d-table-cell display:inline">Next</td>
+              <td className="h2 button-item message d-table-cell display:inline">
+                Back
+              </td>
+              <td className="h2 button-item message d-table-cell display:inline">
+                Next
+              </td>
             </tr>
           </tbody>
         </table>

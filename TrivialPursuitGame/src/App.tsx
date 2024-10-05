@@ -1,14 +1,10 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import ListGroup from "./components/ListGroup";
 import "./App.css";
 import Message from "./Message";
-import getName from "./components/GetName";
 
 function App() {
   const [count, setCount] = useState(0);
   const [playAnswer, setPlayAnswer] = useState(false);
-  const [quitAnswer, setQuitAnswer] = useState(false);
   let [playerName, setName] = useState("");
   let categories = [
     "Arts & Leisure",
@@ -17,7 +13,7 @@ function App() {
     "Science & Nature",
     "Sports & Leisure",
   ];
-  const gameTitle = "Trivial Pursuit Game Title";
+  const gameName = "Trivial Pursuit Game Title";
 
   const onClick = (e: { target: { value: boolean } }) => {
     setPlayAnswer(e.target.value);
@@ -29,10 +25,9 @@ function App() {
     console.log("name is: ", event.target.value);
   };
 
-  const [quit, setQuit] = useState(false);
 
   function displayGameName() {
-    <span>gameName</span>;
+    <p>gameName</p>;
   }
 
   return (
@@ -49,14 +44,14 @@ function App() {
         <div className="h2 page-section-inner">
           <Message />
         </div>
-
+        <div> displayGameName</div>
         <button
           className="h2 container button"
           onClick={() => setPlayAnswer(!playAnswer)}>
           Click to Play Game
         </button>
 
-        <div className="h2 container">( {gameTitle}  && { playAnswer })</div>
+        <div className="h2 container">( {gameName}  && { playAnswer })</div>
         <div className="p page-section-inner">
           Enter Player Name
           <input
@@ -116,11 +111,7 @@ function App() {
           onClick={() => setCount((count) => count + 1)}>
           overall score is {count}
         </button>
-        <button
-          className="h2 container button"
-          onClick={() => setQuit((quit) => !quit)}>
-          Exit?
-        </button>
+
       </div>
     </div>
   );

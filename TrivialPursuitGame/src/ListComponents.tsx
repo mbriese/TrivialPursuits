@@ -18,7 +18,7 @@ let answers = [
 function ListGroup() {
   return (
     <>
-      <h1 className="page-section-inner-bold">Categories</h1>
+      <h1 className="container">Categories</h1>
       <ol className="page-section-item">
         {categories.map((category) => (
           <li key={category}>{categories}</li>

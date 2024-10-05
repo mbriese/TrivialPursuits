@@ -7,7 +7,8 @@ import getName from "./components/GetName";
 
 function App() {
   const [count, setCount] = useState(0);
-  const [answer, setAnswer] = useState(false);
+  const [playAnswer, setPlayAnswer] = useState(false);
+  const [quitAnswer, setQuitAnswer] = useState(false);
   let [playerName, setName] = useState("");
   let categories = [
     "Arts & Leisure",
@@ -17,14 +18,17 @@ function App() {
     "Sports & Leisure",
   ];
   const gameTitle = "Trivial Pursuit Game Title";
+
+  const onClick = (e: { target: { value: boolean } }) => {
+    setPlayAnswer(e.target.value);
+    console.log("do I want to play: ", e.target.value);
+  };
+
   const handleChange = (event: { target: { value: string } }) => {
     setName(event.target.value);
     console.log("name is: ", event.target.value);
   };
-  const onClick = (event: { target: { value: boolean } }) => {
-    setAnswer(event.target.value);
-    console.log("do I want to play: ", event.target.value);
-  };
+
   const [quit, setQuit] = useState(false);
 
   function displayGameName() {
@@ -47,12 +51,12 @@ function App() {
         </div>
 
         <button
-          className="h2 button-item"
-          onClick={() => setAnswer(!answer)}>
+          className="h2 container button"
+          onClick={() => setPlayAnswer(!playAnswer)}>
           Click to Play Game
         </button>
 
-        <div className="h2 page-section-inner">{gameTitle}</div>
+        <div className="h2 container">( {gameTitle}  && { playAnswer })</div>
         <div className="p page-section-inner">
           Enter Player Name
           <input
@@ -62,9 +66,9 @@ function App() {
             onChange={handleChange}
             value={playerName}
           />
-          {<p>Lets play {playerName}</p>}
+          {<p>Lets play Trivial Pursuit {playerName}</p>}
         </div>
-        <div className="h2 page-section-inner">
+        <div className="h2 container page-section-inner">
           <p>Categories</p>
           <p>Select a Category</p>
           <ul className="page-section-item">
@@ -73,7 +77,7 @@ function App() {
             ))}
           </ul>
         </div>
-        <div className="h2 category-section-title message">
+        <div className="page-section-item message">
           this will be category display
         </div>
         <div className="h2 page-section-inner-bold message">
@@ -113,7 +117,7 @@ function App() {
           overall score is {count}
         </button>
         <button
-          className="h2 button-item"
+          className="h2 container button"
           onClick={() => setQuit((quit) => !quit)}>
           Exit?
         </button>

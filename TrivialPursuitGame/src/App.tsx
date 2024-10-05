@@ -5,6 +5,9 @@ import Message from "./Message";
 function App() {
   const [count, setCount] = useState(0);
   const [playAnswer, setPlayAnswer] = useState(false);
+  const playHandler = () => {
+    setPlayAnswer(true);
+  }
   let [playerName, setName] = useState("");
   let categories = [
     "Arts & Leisure",
@@ -15,20 +18,12 @@ function App() {
   ];
   const gameName = "Trivial Pursuit Game Title";
 
-  const onClick = (e: { target: { value: boolean } }) => {
-    setPlayAnswer(e.target.value);
-    console.log("do I want to play: ", e.target.value);
-  };
 
   const handleChange = (event: { target: { value: string } }) => {
     setName(event.target.value);
     console.log("name is: ", event.target.value);
   };
 
-
-  function displayGameName() {
-    <p>gameName</p>;
-  }
 
   return (
     <div className="App">
@@ -44,10 +39,10 @@ function App() {
         <div className="h2 page-section-inner">
           <Message />
         </div>
-        <div> displayGameName</div>
+
         <button
           className="h2 container button"
-          onClick={() => setPlayAnswer(!playAnswer)}>
+          onClick={(playHandler)}>
           Click to Play Game
         </button>
 

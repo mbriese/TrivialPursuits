@@ -5,9 +5,7 @@ import Message from "./Message";
 function App() {
   const [count, setCount] = useState(0);
   const [playAnswer, setPlayAnswer] = useState(false);
-  const playHandler = () => {
-    setPlayAnswer(true);
-  }
+
   let [playerName, setName] = useState("");
   let categories = [
     "Arts & Leisure",
@@ -17,7 +15,6 @@ function App() {
     "Sports & Leisure",
   ];
   const gameName = "Trivial Pursuit Game Title";
-
 
   const handleChange = (event: { target: { value: string } }) => {
     setName(event.target.value);
@@ -36,25 +33,33 @@ function App() {
       </div>
 
       <div className="card">
-        <div className="h2 page-section-inner">
-          <Message />
+        <div className="h2 header">
+          <Message/>
         </div>
-
         <button
-          className="h2 container button"
-          onClick={(playHandler)}>
+            className="h2 flex-container center button"
+        >
           Click to Play Game
         </button>
 
-        <div className="h2 container">( {gameName}  && { playAnswer })</div>
-        <div className="p page-section-inner">
+        <div className="topnav container">
+              <span className="topnav button left">
+                Back
+              </span>
+          <span className="topnav button right">
+                Next
+              </span>
+        </div>
+
+        <div className="h2 container">{gameName} && {playAnswer}</div>
+        <div className="flex-container child">
           Enter Player Name
           <input
-            type="string"
-            id="playerName"
-            name="playerName"
-            onChange={handleChange}
-            value={playerName}
+              type="string"
+              id="playerName"
+              name="playerName"
+              onChange={handleChange}
+              value={playerName}
           />
           {<p>Lets play Trivial Pursuit {playerName}</p>}
         </div>
@@ -63,7 +68,7 @@ function App() {
           <p>Select a Category</p>
           <ul className="page-section-item">
             {categories.map((categories) => (
-              <li key={categories}>{categories}</li>
+                <li key={categories}>{categories}</li>
             ))}
           </ul>
         </div>
@@ -82,28 +87,17 @@ function App() {
         <div className="h2 page-section-inner message">
           this will be answer3 button
         </div>
-        <table>
-          <tbody>
-            <tr>
-              <td className="h2 button-item message d-table-cell display:inline">
-                Back
-              </td>
-              <td className="h2 button-item message d-table-cell display:inline">
-                Next
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <div className="h2 button-item message">Previous Category</div>
-        <div className="h2 button-item message">Next Category</div>
+
+        <div className="h2 flex-container button-item">Previous Category</div>
+        <div className="h2 flex-container button-item">Next Category</div>
         <button
-          className="h2 button-item"
-          onClick={() => setCount((count) => count + 1)}>
+            className="h2 button-item"
+            onClick={() => setCount((count) => count + 1)}>
           category score is {count}
         </button>
         <button
-          className="h2 button-item"
-          onClick={() => setCount((count) => count + 1)}>
+            className="h2 button-item"
+            onClick={() => setCount((count) => count + 1)}>
           overall score is {count}
         </button>
 

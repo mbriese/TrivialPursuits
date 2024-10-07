@@ -38,10 +38,14 @@ function App() {
           <Message/>
         </div>
         <button
-            className="h2 flex-container center button"
-        >
-          Click to Play Game
+            className="h2 container button"
+            onClick={(playHandler)}>
+          Click to Play Game!
         </button>
+
+        { playAnswer &&
+            <div className="h2 container"> "Welcome" </div> }
+
 
         <div className="topnav container">
               <span className="topnav button left">
@@ -65,9 +69,9 @@ function App() {
           {<p>Lets play Trivial Pursuit {playerName}</p>}
         </div>
         <div>
-          <ListGroup />
-          <ListGroup />
-          <ListGroup />
+          <ListGroup/>
+          <ListGroup/>
+          <ListGroup/>
         </div>
         <div className="h2 container page-section-inner">
           <p>Categories</p>

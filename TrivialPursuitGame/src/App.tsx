@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Message from "./Message";
+import ListGroup from "./components/ListGroup";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -62,6 +63,11 @@ function App() {
               value={playerName}
           />
           {<p>Lets play Trivial Pursuit {playerName}</p>}
+        </div>
+        <div>
+          <ListGroup />
+          <ListGroup />
+          <ListGroup />
         </div>
         <div className="h2 container page-section-inner">
           <p>Categories</p>

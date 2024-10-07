@@ -24,6 +24,7 @@ function App() {
     console.log("name is: ", event.target.value);
   };
 
+ // const ToggleVisibility = (event: { target: { }})
 
   return (
     <div className="App">
@@ -43,11 +44,15 @@ function App() {
         <button
           className="h2 container button"
           onClick={(playHandler)}>
-          Click to Play Game
+          Click to Play Game!
         </button>
 
-        <div className="h2 container">( {gameName}  && { playAnswer })</div>
-        <div className="p page-section-inner">
+          {/*<div className="h2 container">( {gameName}  && { playAnswer })</div>*/}
+          { playAnswer &&
+          <div className="h2 container"> "Welcome" </div> }
+
+          { playAnswer &&
+         <div className="p page-section-inner">
           Enter Player Name
           <input
             type="string"
@@ -57,7 +62,7 @@ function App() {
             value={playerName}
           />
           {<p>Lets play Trivial Pursuit {playerName}</p>}
-        </div>
+        </div>}
         <div className="h2 container page-section-inner">
           <p>Categories</p>
           <p>Select a Category</p>

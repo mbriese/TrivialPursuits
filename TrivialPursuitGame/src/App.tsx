@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Message from "./Message";
-import ListGroup from "./components/ListGroup";
+
 
 function App() {
   const [count, setCount] = useState(0);
@@ -91,11 +91,7 @@ function App() {
                   ))}
                 </ul>
               </div>
-              <div>
-                <ListGroup/>
-                <ListGroup/>
-                <ListGroup/>
-              </div>
+
               <div className="h2 flex-container button-item">Previous Category</div>
               <div className="h2 flex-container button-item">Next Category</div>
               <button

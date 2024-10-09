@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Message from "./Message";
+import GameCard from "./components/GameCard";
 
 
 function App() {
@@ -9,13 +10,14 @@ function App() {
   const [playAnswer, setPlayAnswer] = useState(false);
   const playHandler = () => {
     setPlayAnswer(true);
-    setQuitAnswer(false);
+   // setQuitAnswer(false);
   }
-  const [quitAnswer, setQuitAnswer] = useState(false);
+ // const [quitAnswer, setQuitAnswer] = useState(false);
   const quitHandler = () => {
     setPlayAnswer(false);
-    setQuitAnswer(true);
+ //   setQuitAnswer(true);
   }
+  let quit = !playAnswer;
   let [playerName, setName] = useState("");
   let categories = [
     "Arts & Leisure",
@@ -43,18 +45,18 @@ function App() {
       </div>
 
       <div className="card">
-        <div className="h2 header">
+        <div className="container center">
           <Message/>
         </div>
         { !playAnswer &&
             <button
-            className="h2 container button"
+            className="h2 container button center"
             onClick={(playHandler)}>
           Click to Play Game!
         </button>}
-        { playAnswer &&
+        {  !quit &&
             <button
-            className="h2 container button"
+            className="h2 container button center"
             onClick={(quitHandler)}>
           Click to Quit Game!
         </button>
@@ -62,16 +64,9 @@ function App() {
 
         { playAnswer &&
             <>
-              <div className="h2 container">{gameName}</div>
-              <div className="topnav container">
-                      <span className="topnav button left">
-                          Back
-                      </span>
-                <span className="topnav button right">
-                          Next
-                      </span>
-              </div>
-              <div className="flex-container child">
+              <div className="h2 container center">{gameName}</div>
+
+              <div className="topnav flex-container center child">
                 Enter Player Name
                 <input
                     type="string"
@@ -80,20 +75,24 @@ function App() {
                     onChange={handleChange}
                     value={playerName}
                 />
-                {<p>Lets play Trivial Pursuit {playerName}</p>}
-              </div>
-              <div className="h2 container page-section-inner">
-                <p>Categories</p>
-                <p>Select a Category</p>
-                <ul className="page-section-item">
-                  {categories.map((categories) => (
-                      <li key={categories}>{categories}</li>
-                  ))}
-                </ul>
-              </div>
 
-              <div className="h2 flex-container button-item">Previous Category</div>
-              <div className="h2 flex-container button-item">Next Category</div>
+              </div>
+              <div className="topnav container card child">Lets play Trivial Pursuit {playerName}</div>
+              {{playerName} && <div className="topnav container card">
+                <GameCard/>
+              </div>}
+              <div className="topnav container">
+                      <span className="button-nav button left">
+                          Prev Question
+                      </span>
+                <span className="button-nav button right">
+                          Next Question
+                      </span>
+              </div>
+              <div className="topnav container">
+              <span className="h2 topnav button-item center">Previous Category</span>
+              <span className="h2 topnav button-item center">Next Category</span>
+              </div>
               <button
                   className="h2 button-item"
                   onClick={() => setCount((count) => count + 1)}>

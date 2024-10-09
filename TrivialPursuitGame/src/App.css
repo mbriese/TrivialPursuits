@@ -61,6 +61,33 @@
   color: black;
 }
 
+.topnav {
+  overflow: hidden;
+  background-color: #F1F1F1;
+}
+
+/* question and category nav links */
+.button-nav a {
+  font-size: medium;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Links - change color on hover */
+.button-nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.button-nav {
+  overflow: hidden;
+  background-color: #F1F1F1;
+}
+
 .right {
   float: right;
   width: 300px;
@@ -78,7 +105,8 @@
 .center {
   margin: auto;
   width: 300px;
-  border: 3px solid #73AD21;
+  text-align: center;
+  border: 3px;
   padding: 10px;
 }
 
@@ -117,6 +145,7 @@ body {
 
 .page-section-item {
   font-size: 2rem;
+  text-align: center;
   max-width: 1066px;
   margin: 5px;
   border: 6px groove #1C6EA4;
@@ -151,15 +180,18 @@ body {
 
 .container {
   display: flex;
+  text-align: center;
   width: 300px;
-  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
   box-shadow: 0 5px 10px gray;
   border-radius: 15px;
   padding: 3%;
 }
 
 .card {
-  padding: 2em;
+  padding-top: 10px;
+  padding-bottom: 30px;
 }
 
 .read-the-docs {

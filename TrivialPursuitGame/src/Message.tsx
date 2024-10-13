@@ -1,7 +1,7 @@
 function Message() {
   return (
     <>
-      <p>Welcome to Trivial Pursuit!</p>
+      Welcome to Trivial Pursuit!
     </>
   );
 }

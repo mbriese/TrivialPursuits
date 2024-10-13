@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Message from "./Message";
+import GetName from "./components/GetName";
 import GameCard from "./components/GameCard";
 
 
@@ -44,19 +45,19 @@ function App() {
         />
       </div>
 
-      <div className="card">
-        <div className="container center">
+      <div className="containerCard">
+        <div className="badge center">
           <Message/>
         </div>
         { !playAnswer &&
             <button
-            className="h2 container button center"
+            className="h2 cardsContainer button center"
             onClick={(playHandler)}>
           Click to Play Game!
         </button>}
         {  !quit &&
             <button
-            className="h2 container button center"
+            className="h2 cardsContainer button center"
             onClick={(quitHandler)}>
           Click to Quit Game!
         </button>
@@ -64,9 +65,9 @@ function App() {
 
         { playAnswer &&
             <>
-              <div className="h2 container center">{gameName}</div>
+              <div className="badeg cardsContainer">{gameName}</div>
 
-              <div className="topnav flex-container center child">
+              <div className="badge cardsContainer main-nav category-section-title">
                 Enter Player Name
                 <input
                     type="string"
@@ -75,38 +76,36 @@ function App() {
                     onChange={handleChange}
                     value={playerName}
                 />
-
               </div>
-              <div className="topnav container card child">Lets play Trivial Pursuit {playerName}</div>
-              {{playerName} && <div className="topnav container card">
+              <div className="badge main-nav cardsContainer">Lets play Trivial Pursuit {playerName}</div>
+              {{playerName} && <div className="badge cardsContainer">
                 <GameCard/>
               </div>}
-              <div className="topnav container">
-                      <span className="button-nav button left">
+              {{playAnswer} && <div className="flex-container">
+                      <span className="badge category-nav left">
                           Prev Question
                       </span>
-                <span className="button-nav button right">
+                <span className="badge category-nav right">
                           Next Question
                       </span>
+              </div>}
+              <div className="flex-container">
+              <span className="badge button left">Prev Category</span>
+              <span className="badge button right">Next Category</span>
               </div>
-              <div className="topnav container">
-              <span className="h2 topnav button-item center">Previous Category</span>
-              <span className="h2 topnav button-item center">Next Category</span>
-              </div>
-              <button
-                  className="h2 button-item"
+              <div>
+              <span
+                  className="flex-container"
                   onClick={() => setCount((count) => count + 1)}>
                 category score is {count}
-              </button>
-              <button
-                  className="h2 button-item"
+              </span>
+              <span className="flex-container"
                   onClick={() => setCount((count) => count + 1)}>
                 overall score is {count}
-              </button>
+              </span>
+              </div>
             </>
         }
-
-
       </div>
     </div>
   );

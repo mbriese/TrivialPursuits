@@ -4,6 +4,7 @@ const GameCard = () => {
     return (
         <div >
             Hello GameCard
+            Display question here
         </div>
     );
 };

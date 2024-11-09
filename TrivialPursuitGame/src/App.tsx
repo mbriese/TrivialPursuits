@@ -20,10 +20,10 @@ function App() {
   let quit = !playAnswer;
   let [playerName, setName] = useState("");
   let categories = [
-    "Arts & Leisure",
-    "Entertainment",
     "Geography",
-    "Science & Nature",
+    "Entertainment",
+    "History",
+    "Art &",
     "Sports & Leisure",
   ];
   const gameName = "Trivial Pursuit Game Title";
@@ -44,19 +44,21 @@ function App() {
       </div>
 
       <div className="containerCard">
-        <div className="badge center">
+        <div className="h2 cardContainer center">
           <Message />
+          
         </div>
+
         {!playAnswer && (
           <button
-            className="h2 cardsContainer button center"
+            className="cardsContainer button"
             onClick={playHandler}>
             Click to Play Game!
           </button>
         )}
         {!quit && (
           <button
-            className="h2 cardsContainer button center"
+            className="cardsContainer button"
             onClick={quitHandler}>
             Click to Quit Game!
           </button>
@@ -64,9 +66,9 @@ function App() {
 
         {playAnswer && (
           <>
-            <div className="badeg cardsContainer">{gameName}</div>
+            <div className="badge cardsContainer">{gameName}</div>
 
-            <div className="badge cardsContainer main-nav category-section-title">
+            <div className="badge cardsContainer">
               Enter Player Name
               <input
                 type="string"
@@ -84,23 +86,23 @@ function App() {
               <GameCard />
             </div>
 
-            <div className="flex-container">
+            <div className="badge container col-md-8">
               <span className="badge category-nav left">Prev Question</span>
               <span className="badge category-nav right">Next Question</span>
             </div>
 
-            <div className="flex-container">
-              <span className="badge button left">Prev Category</span>
-              <span className="badge button right">Next Category</span>
+            <div className="badge container col-md-8">
+              <span className="badge category-nav left">Prev Category</span>
+              <span className="badge category-nav right">Next Category</span>
             </div>
-            <div>
+            <div className="badge category-nav left">
               <span
-                className="flex-container"
+                className="badge"
                 onClick={() => setCount((count) => count + 1)}>
                 category score is {count}
               </span>
               <span
-                className="flex-container"
+                className="badge"
                 onClick={() => setCount((count) => count + 1)}>
                 overall score is {count}
               </span>

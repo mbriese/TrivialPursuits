@@ -1,48 +1,19 @@
 html, body {
   margin: 0;
-  padding: 50px;
-  width: 50%;
+  padding: 0;
+  width: 100%;
   font-family: 'Roboto', sans-serif;
-  height: 50%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-}
 
-.header {
-  background-color: white;
-  text-align: center;
-  padding: 5px;
 }
+/*.app {*/
 
-.logo {
-  height: 5em;
-  padding: 1em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
+/*}*/
+/* Main navbar styles */
 .main-nav {
-  height: 20px;
+  height: 100px;
   top: 0;
   background-color: #4169E1; /* Royal Blue */
   color: white;
@@ -51,6 +22,7 @@ html, body {
   width: 100%; /* Cover the full width */
   z-index: 1000; /* Ensures it's above other items */
 }
+
 .main-nav h1 {
   margin: 10px 0 0;
   font-size: 2em; /* Large title */
@@ -60,6 +32,8 @@ html, body {
   margin: 0 0 10px;
   font-style: italic;
 }
+
+/* Category navigation styles */
 .category-nav {
   background-color: #303030; /* Dark contrasting background for category badges */
   padding: 10px 0;
@@ -67,11 +41,11 @@ html, body {
 
 .badge {
   display: inline-block;
-  padding: 5px 5px;
-  /*margin: 0 5px;*/
-  border-radius: 20px; /* Pill shape */
+  padding: 5px 15px;
+  margin: 0 5px;
+  border-radius: 50px; /* Pill shape */
   background-color: #6A9AE2; /* Lighter shade of blue */
-  color: rgb(255, 255, 255);
+  color: white;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -81,10 +55,11 @@ html, body {
   background-color: #4169E1; /* Slightly darker on hover */
 }
 
+
 .content {
   padding-top: 20px; /* Adjust based on the total height of the fixed navbar and sub-nav */
-}
 
+}
 .cardsContainer {
   display: flex;
   flex-wrap: wrap; /* Allows items to wrap to the next line */
@@ -92,7 +67,6 @@ html, body {
   row-gap: 20px;
   padding: 20px; /* Padding around the entire grid */
   justify-content: center; /* Center items in the container */
-  background-color: #ddd;
 }
 
 .card, .card-back {
@@ -132,138 +106,16 @@ html, body {
   margin-right: 5px;
   background-color: #6A9AE2;
 }
+
 .categoryButton:hover {
   transform: scale(1.10);
   background-color: #4169E1;
 }
-
-/* question and category nav links */
-.button-nav a {
-  font-size: medium;
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Links - change color on hover */
-.button-nav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.button-nav {
-  overflow: hidden;
-  background-color: #F1F1F1;
-}
-
-.right {
-  float: right;
-  width: 300px;
-  border: 3px solid #73AD21;
-  padding: 10px;
-}
-
-.left {
-  float: left;
-  width: 300px;
-  border: 3px solid #73AD21;
-  padding: 10px;
-}
-
-.center {
-  margin: auto;
-  width: 300px;
-  text-align: center;
-  border: 3px;
-  padding: 10px;
-}
-
-
-body {
-  margin: 0;
-  padding: 160px 500px;
-  background-color: white;
-}
-
-.category-section-title {
-  font-size: 15px;
-  text-align: left;
-  font-weight: bold;
-  margin: 15px;
-  border: 3px groove #1C6EA4;
-}
-
-.button {
-  font-size: 2rem;
-  font-weight: 700;
-  max-width: 1066px;
-  margin: 5px;
-  border:rgb(20, 78, 117);
-  border-radius: 5rem;
-}
-
-.button:hover {
-  box-shadow: 0 5px 0 0 #5664a7;
-}
-
-.button:active {
-  box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-
-.page-section-item {
-  font-size: 2rem;
-  text-align: center;
-  max-width: 1066px;
-  margin: 5px;
-  border: 6px groove #1C6EA4;
-}
-
-.page-section-inner {
-  font-size: 2rem;
-  max-width: 1066px;
-  margin: 5px;
-}
-
-.page-section-inner-bold {
-  font-size: 2rem;
-  font-weight:700;
-  max-width: 1066px;
-  margin: 5px;
-}
-
-.page-section-title {
-  font-size: 4rem;
-  margin: 15px;
-  line-height: 1;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Source Sans 3', sans-serif;
-}
-
-.container {
-  display: flex;
-  text-align: center;
-  width: 300px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  box-shadow: 0 5px 10px gray;
-  border-radius: 15px;
-  padding: 3%;
-}
-
-
-
-
-
-.flex-container {
-  flex-flow: row wrap;
-  justify-content: space-around;
+@media (max-width: 600px) {
+  .cardsContainer {
+    grid-template-columns: 1fr;
+  }
+  .buttonContainer {
+    grid-template-columns: 1fr;
+  }
 }

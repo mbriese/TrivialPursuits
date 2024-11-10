@@ -44,9 +44,8 @@ function App() {
       </div>
 
       <div className="containerCard">
-        <div className="h2 cardContainer center">
+        <div className="h2 cardsContainer center">
           <Message />
-          
         </div>
 
         {!playAnswer && (
@@ -82,16 +81,30 @@ function App() {
               Lets play Trivial Pursuit {playerName}
             </div>
 
-            <div className="badge cardsContainer">
-              <GameCard />
-            </div>
+            <div className="content">
+              <div className="cardsContainer">
+                <img src='../public/geographyPie.png'></img>
+                <h4>Category Geography</h4></div>
+              <div className="cardsContainer">
+                <div className="card">
+                  <h4>
+                    Which of the 5 Great Lakes does not have a border with
+                    Canada?
+                  </h4>
+                  </div>
+                  <div className="cardsContainer">
+                  <h4>Lake Michigan</h4>
+                  </div>
+                </div>
+              </div>
+          
 
-            <div className="badge container col-md-8">
+            <div className="badge cardsContainer col-md-8">
               <span className="badge category-nav left">Prev Question</span>
               <span className="badge category-nav right">Next Question</span>
             </div>
 
-            <div className="badge container col-md-8">
+            <div className="badge cardsContainer col-md-8">
               <span className="badge category-nav left">Prev Category</span>
               <span className="badge category-nav right">Next Category</span>
             </div>

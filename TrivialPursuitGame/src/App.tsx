@@ -80,24 +80,27 @@ function App() {
             <div className="badge main-nav cardsContainer">
               Lets play Trivial Pursuit {playerName}
             </div>
+            <div>
+              <GameCard />
+            </div>
 
-            <div className="content">
+            {/*           <div className="content">
+              <div className="top">
+              <h4>Category Geography</h4>
+                <img src='../public/geographyPie.png'/>
+                </div>
               <div className="cardsContainer">
-                <img src='../public/geographyPie.png'></img>
-                <h4>Category Geography</h4></div>
-              <div className="cardsContainer">
-                <div className="card">
-                  <h4>
+                <div className="bottom">
+                  <h2>
                     Which of the 5 Great Lakes does not have a border with
                     Canada?
-                  </h4>
+                  </h2>
                   </div>
-                  <div className="cardsContainer">
+                  <div className="card-back">
                   <h4>Lake Michigan</h4>
                   </div>
                 </div>
-              </div>
-          
+              </div> */}
 
             <div className="badge cardsContainer col-md-8">
               <span className="badge category-nav left">Prev Question</span>

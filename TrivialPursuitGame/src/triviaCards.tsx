@@ -4,7 +4,7 @@ const triviaQuestions = [
     {categoryquestion: 'history1', category: 'history', question: 'What was Martin Luther King, Jrs birth name?', answer: 'Martin King, Jr'},
     {categoryquestion: 'arts&literature1', category: 'arts&literature', question: 'The town of Agra in India houses what famous monument to Shah Jahans wife?', answer: 'Taj Mahal'},
     {categoryquestion: 'science&nature1', category: 'science&nature', question: 'Where in the human body are the two most common areas to check for a pulse?', answer: 'Neck and Wrist'},
-    {categoryquestion: 'sports&leisure1', category: 'sports&leisure', question: 'A race that is longer than 26.2 miles in length is called a what?', answer: 'Ultramarathon-Typical race lengths are 31 to 100 miles long, but can extend much further'}
+    {categoryquestion: 'sports&leisure1', category: 'sports&leisure', question: 'A race that is longer than 26.2 miles in length is called a what?', answer: 'Ultramarathon-Typical race lengths are 31 to 100 miles long, but can extend much further'},
 
     {categoryquestion: 'geography2', category: 'geography', question: 'What is the name of Earths most recent supercontinent, which formed about 270 million years ago?', answer: 'Pangaea-Each continent then went its own merry way about 70 million years later.'},
     {categoryquestion: 'entertainment2', category: 'entertainment', question: 'As a teen, Justin Timberlake appeared on which two shows that showcased his singing and dancing abilities?', answer: 'Star Search and The All-New Mickey Mouse Club'},
@@ -40,8 +40,5 @@ const triviaQuestions = [
     {categoryquestion: 'arts&literature6', category: 'arts&literature', question: 'Which famous Da Vinci painting was stolen from the Louvre by an Italian in 1911, who kept it hidden for two years?', answer: 'Mona Lisa-The thief claimed that national pride inspired him to return it to its homeland.'},
     {categoryquestion: 'science&nature6', category: 'science&nature', question: 'Which primate is the worlds largest tree-dwelling mammal, weighing in at up to 200 pounds?', answer: 'Orangutan'},
     {categoryquestion: 'sports&leisure6', category: 'sports&leisure', question: 'In England, medievel kings restricted most sports on Sundays so that men would engage more in which crucial sport-jousting, fencing or archery?', answer: 'Archery-it was a military skill important to national defense.'}
-    
-
-
     
 ]

@@ -77,33 +77,45 @@ function App() {
                 value={playerName}
               />
             </div>
-            <div className="badge main-nav cardsContainer">
+            <div className="badge main-nav cardsContainer top">
               Lets play Trivial Pursuit {playerName}
             </div>
-            <div>
-              <GameCard category='geography' question='Which of the five Great Lakes does not have a border with Canada?' answer='Lake Michigan'/>
-            </div>
+            <div className="content">
+              <div className="cardContainer">
+                <div className="card">
+                <GameCard
+                  category="geography"
+                  question="Which of the five Great Lakes does not have a border with Canada?"
+                  answer="Lake Michigan"
+                />
+                </div>
 
-            <div className="badge cardsContainer col-md-8">
-              <span className="badge category-nav left">Prev Question</span>
-              <span className="badge category-nav right">Next Question</span>
-            </div>
+                <div className="badge cardsContainer col-md-8">
+                  <span className="badge category-nav left">Prev Question</span>
+                  <span className="badge category-nav right">
+                    Next Question
+                  </span>
+                </div>
 
-            <div className="badge cardsContainer col-md-8">
-              <span className="badge category-nav left">Prev Category</span>
-              <span className="badge category-nav right">Next Category</span>
-            </div>
-            <div className="badge category-nav left">
-              <span
-                className="badge"
-                onClick={() => setCount((count) => count + 1)}>
-                category score is {count}
-              </span>
-              <span
-                className="badge"
-                onClick={() => setCount((count) => count + 1)}>
-                overall score is {count}
-              </span>
+                <div className="badge cardsContainer col-md-8">
+                  <span className="badge category-nav left">Prev Category</span>
+                  <span className="badge category-nav right">
+                    Next Category
+                  </span>
+                </div>
+                <div className="badge category-nav left">
+                  <span
+                    className="badge"
+                    onClick={() => setCount((count) => count + 1)}>
+                    category score is {count}
+                  </span>
+                  <span
+                    className="badge"
+                    onClick={() => setCount((count) => count + 1)}>
+                    overall score is {count}
+                  </span>
+                </div>
+              </div>
             </div>
           </>
         )}
